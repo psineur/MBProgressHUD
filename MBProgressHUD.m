@@ -248,6 +248,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
 	if (self) {
+		self.userInteractionEnabled = NO;
         // Set default values for properties
         self.animationType = MBProgressHUDAnimationFade;
         self.mode = MBProgressHUDModeIndeterminate;
