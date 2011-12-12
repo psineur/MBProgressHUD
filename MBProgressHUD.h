@@ -120,6 +120,14 @@ typedef enum {
 }
 
 /**
+ * Creates a new HUD, adds it to provided view and shows it if it's not shown
+ * there already.
+ *
+ * @see showHUDAddedTo:animated:
+ */
++ (MBProgressHUD *)ensureHUDAddedTo:(UIView *)view animated:(BOOL)animated;
+
+/**
  * Creates a new HUD, adds it to provided view and shows it. The counterpart to this method is hideHUDForView:animated:.
  * 
  * @param view The view that the HUD will be added to

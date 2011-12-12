@@ -196,6 +196,21 @@
 #pragma mark -
 #pragma mark Class methods
 
++ (MBProgressHUD *)ensureHUDAddedTo:(UIView *)view animated:(BOOL)animated 
+{
+    // Do nothing if HUD is already added.
+	for (UIView *v in [view subviews]) {
+		if ([v isKindOfClass:[MBProgressHUD class]]) {
+			return (MBProgressHUD *)v;
+		}
+	}
+    
+	MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
+	[view addSubview:hud];
+	[hud show:animated];
+	return [hud autorelease];
+}
+
 + (MBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
 	MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
 	[view addSubview:hud];
