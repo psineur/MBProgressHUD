@@ -177,7 +177,7 @@
         self.indicator = self.customView;
     } else {
 		self.indicator = [[[UIActivityIndicatorView alloc]
-						   initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];
+						   initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray] autorelease];
         [(UIActivityIndicatorView *)indicator startAnimating];
 	}
 	
